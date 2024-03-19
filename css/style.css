@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Noto+Sans+Lao+Looped:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* default customization */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Didact Gothic", sans-serif; 
+    background: #faf6ff;
+    color: #272727;
+    padding: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #272727;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* btn */
+.btn {
+    background: #272727;
+    color: #fff;
+    display: inline-block;
+    padding: 0.3rem 0 0.5rem;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #124559;
+}
+
+/* card customization */
+#cards.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #fff;
+    gap: 2rem;
+    height: 250px;
+    width: 100%;
+    max-width: 1080px;
+    padding: 0 2.5rem;
+    border: 1px solid #bbb;
+    box-shadow: 10px 9px 0px 0px rgba(187,187,187,1);
+}
+
+#cards .card-billed,
+#cards .card-family,
+#cards .card-individual,
+#cards .card-teams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #bbb;
+}
+
+#cards .card-billed div {
+    padding: 0.5rem 0;
+}
+
+
+#cards .card-teams {
+    border-right: none;
+}
+
+#cards .card-family p,
+#cards .card-individual p,
+#cards .card-teams p {
+ margin: 0.5rem 0 1rem;
+}
+
+#cards .purchase a {
+    text-decoration: underline;
+}
+
+#cards .purchase a:hover {
+    color: #124559;
+    text-decoration: none;
+}
+
+
+@media(max-width: 780px) {
+    #cards.grid-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #fff;
+        gap: 2rem;
+        height: 630px;
+        width: 100%;
+        width: 350px;
+        padding: 0 2.5rem;
+        border: none;
+        box-shadow: 10px 9px 0px 0px rgba(187,187,187,1);
+    }
+
+    .btn {
+        margin-bottom: 1.1rem;
+    }
+
+    #cards .card-billed,
+    #cards .card-family,
+    #cards .card-individual,
+    #cards .card-teams {
+    border-right: none;
+    border-bottom: 1px dotted #bbb;
+    }
+
+    #cards .card-billed {
+        padding-bottom: 1rem;
+    }
+
+    #cards .card-teams {
+        border-bottom: none;
+    }
+}
